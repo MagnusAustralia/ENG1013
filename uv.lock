@@ -1,0 +1,35 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[[package]]
+name = "project"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pymata4" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pymata4", specifier = ">=1.15" }]
+
+[[package]]
+name = "pymata4"
+version = "1.15"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyserial" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/05/36/c4c99fb9c71aee7e65978c5335fcd2b6dbcef048539dbc3c78ac44609662/pymata4-1.15.tar.gz", hash = "sha256:df2205f39a84d1164d3641f1944321500bc9e484c1af3e7ae6546471ad538afb", size = 24005, upload-time = "2022-01-21T20:42:33.874Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9c/16/6c9182ca9e62502673c732daa413317af71269afa375970d4ac33691c160/pymata4-1.15-py2.py3-none-any.whl", hash = "sha256:cca1062e89bd68c72ccef32a0c10a8d78a0e21ca09da4569cc878be8d596db3a", size = 24090, upload-time = "2022-01-21T20:42:22.83Z" },
+]
+
+[[package]]
+name = "pyserial"
+version = "3.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz", hash = "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb", size = 159125, upload-time = "2020-11-23T03:59:15.045Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0", size = 90585, upload-time = "2020-11-23T03:59:13.41Z" },
+]
