@@ -1,6 +1,6 @@
 # ENG1013
 
-The repo is split into the two milestone code submissions required.
+The repository is split into the two milestone code submissions required for the project.
 
 ---
 
@@ -8,21 +8,23 @@ The repo is split into the two milestone code submissions required.
 
 ### Prerequisites
 
-Ensure that you have previously flashed FirmataExpress to the Arduino Uno
+Ensure that you have previously flashed **FirmataExpress** to the Arduino Uno.
 
-Either use the global python environment (what you have likely done) or use a manager such as uv, to install pymata4
+You can either use your global Python environment, as you may have done previously, or use a Python environment manager such as `uv`.
 
-Windows:
+### Installing uv
 
-```bash
+#### Windows
+
+````powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
 
-macOS:
+
+#### macOS
 
 ```bash
 brew install uv
-```
+````
 
 ### Installation
 
@@ -39,15 +41,24 @@ brew install uv
    uv sync
    ```
 
-3. \*\*To run a file
-   ```bash
-   uv run main.py
-   ```
+### Running Python files
+
+To run a python file:
+
+```bash
+uv run python main.py
+```
 
 ---
 
 ## 🤝 How to add
 
-1. Create your Feature Branch (`git add .`)
-2. Commit your Changes (`git commit -m 'Explain what you have done'`)
-3. Push to the Branch (`git push origin test`)
+1. Switch to test branch (`git switch test`)
+2. Get latest changes (`git pull`)
+3. Make your changes
+   Run Ruff: (`uv run ruff check .`)
+   Check ENG1013 Standards: (`uv run python check_eng1013.py`)
+   Check formating (`uv run ruff format --check`)
+4. Stage your Changes (`git add .`)
+5. Commit your Changes (`git commit -m 'Explain what you have done'`)
+6. Push to the Branch (`git push origin test`)

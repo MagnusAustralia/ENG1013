@@ -2,10 +2,17 @@ name: Python Code Quality
 
 on:
   push:
+    branches:
+      - test
+      - main
+
   pull_request:
+    branches:
+      - main
 
 jobs:
-  check:
+  eng1013:
+    name: ENG1013 Code Standards
     runs-on: ubuntu-latest
 
     steps:
