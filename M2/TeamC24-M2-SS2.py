@@ -38,24 +38,26 @@ board.set_pin_mode_digital_output(tl5R)
 
 # Functions
 def main():
-	try:
-		while True:
-			if board.digital_read(pb1)[0] or board.digital_read(pb2)[0]:
-				time.sleep(2)
-				if board.digital_read(tl5R)[0] == 0:
-					# Set TL5 to Yellow
-					time.sleep(3)
-				else:
-					pass
-					# Set TL4 to Yellow
-				# Turn PL1/PL2 green for 3 seconds, then flash red for 2s before resetting to solid red
-				# Turn TL4 to green
-	except KeyboardInterrupt:
-		print("Program stopped")
-	finally:
-		board.shutdown()
+    """Main function."""
+    try:
+        while True:
+            if board.digital_read(pb1)[0] or board.digital_read(pb2)[0]:
+                time.sleep(2)
+                if board.digital_read(tl5R)[0] == 0:
+                    # Set TL5 to Yellow
+                    # time.sleep(3)
+                    pass
+                else:
+                    pass
+                    # Set TL4 to Yellow
+                # Turn PL1/PL2 green for 3 seconds, then flash red for 2s before resetting to solid red
+                # Turn TL4 to green
+    except KeyboardInterrupt:
+        print("Program stopped")
+    finally:
+        board.shutdown()
 
 
 # Main
 if __name__ == "__main__":
-	main()
+    main()

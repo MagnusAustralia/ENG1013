@@ -7,9 +7,10 @@
 
 # Functions
 def main():
-	pass
+    """The main function."""
+    pass
 
 
 # Main
 if __name__ == "__main__":
-	main()
+    main()

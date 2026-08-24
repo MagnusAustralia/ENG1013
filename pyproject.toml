@@ -1,9 +1,31 @@
 [project]
-name = "project"
+name = "ENG1013"
 version = "0.1.0"
-description = "Add your description here"
+description = "ENG1013 project"
 readme = "README.md"
 requires-python = ">=3.14"
+
 dependencies = [
     "pymata4>=1.15",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.4",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+indent-style = "space"
